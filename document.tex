@@ -1,9 +1,9 @@
 \documentclass{book}
 
 %packages
+\usepackage[UTF8]{ctex}
 \usepackage{duckuments}
 \usepackage{pgfpages}
-\pgfpagesuselayout{2 on 1}[a4paper,landscape]
 \usepackage{pgffor}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
@@ -18,58 +18,42 @@
 	top=1.5in,
 	bottom=1in
 }
-\graphicspath{{images/}}
+\pgfpagesuselayout{2 on 1}[a4paper,landscape]
+\graphicspath{{images/}{images/chongqing/}{images/hangzhou/}{images/phd/}{images/marriage/}{images/travel/}{images/foods/}{images/xiangyang/}}
 
 \begin{document}
+	\clearpage
+	\begin{figure}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,center]{cover.jpg}
+	\end{figure}
+	
+	\clearpage
+	\begin{center}
+		{\Huge The Story of Ann \& Jimmy (Volume 9)}
+	\end{center}
+	\vspace*{\fill}
+	\copyright \ 鲍萍 \& 张吉祥 (2024.02.14)
+
 	\tableofcontents
 	
-	\chapter{One}
-	The current page number is \thepage.
+	\chapter{毕业}
+	\include{phd}
 	
-	\clearpage
-	\ifthenelse{\isodd{\thepage}}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8655}
-		\end{figure}
-	}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8655}
-		\end{figure} 
-	}
+	\chapter{领证}
+	\include{marriage}
+
+	\chapter{玩聚}
+	\include{travel}
 	
-	\clearpage
-	\ifthenelse{\isodd{\thepage}}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8663}
-		\end{figure}
-	}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8663}
-		\end{figure} 
-	}
+	\chapter{美食}
+	\include{foods}
 	
-	\clearpage
-	\ifthenelse{\isodd{\thepage}}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8857}
-		\end{figure}
-	}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8857}
-		\end{figure} 
-	}
+	\chapter{杭州}
+	\include{hangzhou}
 	
-	\chapter{Two}
-	The current page number is \thepage.
+	\chapter{重庆}
+	\include{chongqing}
 	
-	\clearpage
-	\ifthenelse{\isodd{\thepage}}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8723}
-		\end{figure}
-	}{
-		\begin{figure}
-			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8723}
-		\end{figure} 
-	}
+	\chapter{襄阳}
+	\include{xiangyang}
 \end{document}

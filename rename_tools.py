@@ -1,13 +1,16 @@
 import os
 from datetime import datetime
 
-topics = ['chongqing', 'foods', 'h1', 'hangzhou_life',
+topics = ['chongqing', 'foods',  'hangzhou',
           'marriage', 'phd', 'travel', 'xiangyang']
+
+# Get the directory of the current script
+script_directory = os.path.dirname(os.path.abspath(__file__))
 
 
 for topic in topics:
     # Directory containing the images
-    directory = "/Users/zhangjixiang/Code/AJ_Vol9/images/" + topic
+    directory = script_directory + "/images/" + topic
 
     # Check if the directory exists
     if not os.path.isdir(directory):
