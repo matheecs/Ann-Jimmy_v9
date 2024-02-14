@@ -1,0 +1,75 @@
+\documentclass{book}
+
+%packages
+\usepackage{duckuments}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper,landscape]
+\usepackage{pgffor}
+\usepackage{fancyhdr}
+\usepackage[export]{adjustbox}
+\usepackage{ifthen}
+\usepackage{geometry}
+\usepackage{graphicx}
+
+%settings
+\geometry{
+	inner=1.5in,
+	outer=0.5in,
+	top=1.5in,
+	bottom=1in
+}
+\graphicspath{{images/}}
+
+\begin{document}
+	\tableofcontents
+	
+	\chapter{One}
+	The current page number is \thepage.
+	
+	\clearpage
+	\ifthenelse{\isodd{\thepage}}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8655}
+		\end{figure}
+	}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8655}
+		\end{figure} 
+	}
+	
+	\clearpage
+	\ifthenelse{\isodd{\thepage}}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8663}
+		\end{figure}
+	}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8663}
+		\end{figure} 
+	}
+	
+	\clearpage
+	\ifthenelse{\isodd{\thepage}}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8857}
+		\end{figure}
+	}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8857}
+		\end{figure} 
+	}
+	
+	\chapter{Two}
+	The current page number is \thepage.
+	
+	\clearpage
+	\ifthenelse{\isodd{\thepage}}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,right]{_MG_8723}
+		\end{figure}
+	}{
+		\begin{figure}
+			\includegraphics[width=\textwidth,height=\textheight,keepaspectratio,left]{_MG_8723}
+		\end{figure} 
+	}
+\end{document}
