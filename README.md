@@ -29,6 +29,8 @@
 
    <https://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality>
 
+5. **线装书**：折页、打孔和缝线 <https://www.bilibili.com/video/BV1pu411Q7mM>
+
 ## tips
 
 * convert `heic` to `jpg`
