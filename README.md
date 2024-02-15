@@ -26,3 +26,10 @@ OmniGraffle
 ## LaTeX IDE
 
 <https://www.texstudio.org/>
+
+## build
+
+```shell
+latexmk -xelatex document.tex
+latexmk -c
+```
