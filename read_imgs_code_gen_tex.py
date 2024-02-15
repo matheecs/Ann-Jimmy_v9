@@ -33,3 +33,6 @@ for topic in topics:
                     f'}}'
                 )
                 tex_file.write(code_string + '\n')
+
+    os.rename(script_directory + '/' + tex_file_name,
+              script_directory + '/chapters/' + tex_file_name)

@@ -30,6 +30,14 @@ OmniGraffle
 ## build
 
 ```shell
-latexmk -xelatex document.tex
+latexmk -xelatex root.tex
 latexmk -c
 ```
+
+## reduce PDF size
+
+```shell
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf root.pdf
+```
+
+<https://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality>
