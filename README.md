@@ -1,4 +1,4 @@
-# Albums
+# DIY albums tips
 
 ## convert `heic` to `jpg`
 
@@ -6,6 +6,8 @@
 magick mogrify -monitor -format jpg *.heic
 magick mogrify -monitor -format jpg *.HEIC
 ```
+
+**NOTE: always use JPEG format!** (iPhone 12 mini, Fujifilm X100V)
 
 ## rename images
 
