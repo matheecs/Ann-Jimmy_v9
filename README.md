@@ -1,45 +1,44 @@
-# DIY albums tips
+# DIY Albums
 
-## convert `heic` to `jpg`
+## usage
 
-```shell
-magick mogrify -monitor -format jpg *.heic
-magick mogrify -monitor -format jpg *.HEIC
-```
+1. rename images
 
-**NOTE: always use JPEG format!** (iPhone 12 mini, Fujifilm X100V)
+   ```shell
+   python rename_tools.py
+   ```
 
-## rename images
+2. code gen
 
-```shell
-python rename_tools.py
-```
+   ```shell
+   python read_imgs_code_gen_tex.py
+   ```
 
-## code gen
+3. build
 
-```shell
-python read_imgs_code_gen_tex.py
-```
+   ```shell
+   latexmk -xelatex root.tex
+   latexmk -c
+   ```
 
-## merge images
+4. reduce PDF size
 
-OmniGraffle
+   ```shell
+   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf root.pdf
+   ```
 
-## LaTeX IDE
+   <https://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality>
 
-<https://www.texstudio.org/>
+## tips
 
-## build
+* convert `heic` to `jpg`
 
-```shell
-latexmk -xelatex root.tex
-latexmk -c
-```
+  ```shell
+  magick mogrify -monitor -format jpg *.heic
+  magick mogrify -monitor -format jpg *.HEIC
+  ```
 
-## reduce PDF size
+  **NOTE: always use JPEG format!** (iPhone 12 mini, Fujifilm X100V)
 
-```shell
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf root.pdf
-```
-
-<https://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality>
+* merge images by OmniGraffle
+* IDE: <https://www.texstudio.org/>
