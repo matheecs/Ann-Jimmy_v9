@@ -38,9 +38,11 @@
 * convert `heic` to `jpg`
 
   ```shell
-  magick mogrify -monitor -format jpg *.heic
-  magick mogrify -monitor -format jpg *.HEIC
+  magick mogrify -monitor -define preserve-timestamp=true -format jpg *.heic
+  magick mogrify -monitor -define preserve-timestamp=true -format jpg *.HEIC
   ```
+
+  <https://unix.stackexchange.com/a/758639/602051>
 
   **NOTE: always use JPEG format!** (iPhone 12 mini, Fujifilm X100V)
 
